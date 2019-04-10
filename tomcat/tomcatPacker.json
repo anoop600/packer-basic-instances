@@ -20,15 +20,21 @@
     },
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "packer-jenkins {{timestamp}}",
+    "ami_name": " tomcat-packer{{timestamp}}",
     "type": "amazon-ebs",
 		"communicator":"ssh"
     
   }],
   "provisioners": [
-        {
+       	{
+            "type": "file",
+            "source": "tomcat.service",
+            "destination": "/home/ubuntu/tomcat.service"
+
+        },
+	 {
            "type": "shell",
-           "script": "jenkinsscript.sh"
+           "script": "tomcatscript.sh"
 	} 
 ]
 }
