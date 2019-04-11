@@ -11,7 +11,15 @@ sudo chmod -R g+r /opt/tomcat/conf
 sudo chmod g+x /opt/tomcat/conf
 sudo chown -R tomcat /opt/tomcat/webapps/ /opt/tomcat/work/ /opt/tomcat/temp/ /opt/tomcat/logs/
 sudo cp /home/ubuntu/tomcat.service /etc/systemd/system/
+#sleep 5
+#echo "Sleep One"
 sudo systemctl daemon-reload
+#sleep 5
+#echo "Sleep Two"
 sudo systemctl start tomcat
+#sleep 5
+#echo "Sleep Three"
 sudo ufw allow 8080
-
+#sudo sh /opt/tomcat/bin/startup.sh
+#sleep 5
+#echo "Sleep Four"
