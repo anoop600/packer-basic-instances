@@ -19,7 +19,8 @@ sudo systemctl daemon-reload
 sudo systemctl start tomcat
 #sleep 5
 #echo "Sleep Three"
+sudo systemctl enable tomcat
 sudo ufw allow 8080
-#sudo sh /opt/tomcat/bin/startup.sh
+sudo sh /opt/tomcat/bin/startup.sh
 #sleep 5
 #echo "Sleep Four"
