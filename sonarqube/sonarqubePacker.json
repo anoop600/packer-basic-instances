@@ -18,7 +18,7 @@
         "owners": ["099720109477"],
         "most_recent": true
     },
-    "instance_type": "t2.micro",
+    "instance_type": "t2.medium",
     "ssh_username": "ubuntu",
     "ami_name": "packer-sonarqube-{{timestamp}}",
     "type": "amazon-ebs",
@@ -32,6 +32,13 @@
             "destination": "/home/ubuntu/sonarqube.service"
 
         },
+	 {
+            "type": "file",
+            "source": "sonar.properties",
+            "destination": "/home/ubuntu/sonar.properties"
+
+        },
+
 	{
             "type": "file",
             "source": "database.sql",
